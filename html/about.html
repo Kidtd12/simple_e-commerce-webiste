@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>INNOVIX | E-commerce template</title>
+  <title>KID-ION | E-commerce template</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -57,7 +57,7 @@
 								font-family="AustinBold, Austin" font-weight="bold">
 								<g id="Group" transform="translate(-108.000000, -297.000000)" fill="#000000">
 									<text id="AVIATO">
-										<tspan x="108.94" y="325">INNOVIX</tspan>
+										<tspan x="108.94" y="325">KID-ION</tspan>
 									</text>
 								</g>
 							</g>
@@ -127,10 +127,11 @@
 					</li><!-- / Search -->
 
 					<!-- Languages -->
-					<li class="commonSelect">
+					<li class="commonSelect"  id="languageSwitcher">
 						<select class="form-control">
-							<option>EN</option>
-							<option>AM</option>
+							<option>Engilish</option>
+							<option>Amharic</option>
+							<option>orom</option>
 						</select>
 					</li><!-- / Languages -->
 
@@ -353,21 +354,21 @@
 			<div class="col-md-3">
 				<div class="team-member text-center">
 					<img class="img-circle" src="">
-					<h4>Daniel</h4>
+					<h4>Michael</h4>
 					<p>Developer</p>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="team-member text-center">
 					<img class="img-circle" src="">
-					<h4>Eden</h4>
+					<h4>Kidist</h4>
 					<p>Shop Manager</p>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="team-member text-center">
 					<img class="img-circle" src="">
-					<h4>Boin</h4>
+					<h4>Weldekidan</h4>
 					<p>Shop Manager</p>
 				</div>
 			</div>
@@ -432,7 +433,7 @@
 						<a href="contact.html">PRIVACY POLICY</a>
 					</li>
 				</ul>
-				<p class="copyright-text">Copyright &copy;2022, Designed &amp; Developed by <a href="">INNOVIX</a></p>
+				<p class="copyright-text">Copyright &copy;2025, Designed &amp; Developed by <a href="">KID-ION</a></p>
 			</div>
 		</div>
 	</div>
@@ -466,6 +467,56 @@
     <!-- Main Js File -->
     <script src="../assets/js/script.js"></script>
     
+
+
+
+
+
+<script>
+  const translations = {
+    am: {
+      home: "መነሻ",
+      shop: "ሱቅ",
+      pages: "ገጾች",
+      blog: "ብሎግ",
+      elements: "አካላት",
+      cart: "ጋሪ",
+      search: "ፈልግ",
+      subscribe: "ዜና ይቀበሉ",
+      subscribeMsg: "ኢሜል ያስገቡ...",
+      buttonText: "አሁን ይመዝገቡ!"
+    },
+    en: {
+      home: "Home",
+      shop: "Shop",
+      pages: "Pages",
+      blog: "Blog",
+      elements: "Elements",
+      cart: "Cart",
+      search: "Search",
+      subscribe: "SUBSCRIBE TO NEWSLETTER",
+      subscribeMsg: "Enter Your Email Address",
+      buttonText: "Subscribe Now!"
+    }
+  };
+
+  document.getElementById("languageSwitcher").addEventListener("change", function () {
+    const lang = this.value;
+    document.querySelector('a[href="index.html"]').textContent = translations[lang].home;
+    document.querySelector('.dropdown.cart-nav a').innerHTML = `<i class="tf-ion-android-cart"></i>${translations[lang].cart}`;
+    document.querySelector('.dropdown.search a').innerHTML = `<i class="tf-ion-ios-search-strong"></i> ${translations[lang].search}`;
+    document.querySelector(".call-to-action h2").textContent = translations[lang].subscribe;
+    document.querySelector(".call-to-action input").placeholder = translations[lang].subscribeMsg;
+    document.querySelector(".call-to-action button").textContent = translations[lang].buttonText;
+  });
+</script>
+
+
+
+
+
+
+
 
 
   </body>
